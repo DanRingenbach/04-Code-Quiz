@@ -1,12 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="styles.css" rel="stylesheet">
+    <!-- Defer loads script file last -->
+    <script defer src="script.js"></script>
+    <title class = "hide">Code Quiz</title>
 </head>
+
 <body>
-    
+    <div id= "timer">
+        <p class="hide">You have</p>
+        <h1 id="stopwatch">Timer</h1>
+        <p class="hide">seconds left</p>
+    </div>
+    <div id="start-page" class="show">
+        <h1>Javascript Quiz!</h1>
+        <p>This is a quiz of general coding knowledge and javascript basics!  You have 60 seconds to finish and your final score will be the time you have left remaining on the clock!  You will be penalized -10 points for each wrong answer so think carefully and answer quickly!</p>
+        <p>Press start to begin!</p>
+        <div class="control-container container">
+            <div id="controls">
+                <button id="start-btn" class="start-btn btn">Start</button>
+            </div>
+        </div>
+    </div>
+    <div id="quiz-container" class="container hide">
+        <div class="question-container container">
+            <div id="question">Question</div>
+            <ul>
+                <li><button id="answer-1" class="answer-btn btn">Answer 1</button></li>
+                <li><button id="answer-2" class="answer-btn btn">Answer 2</button></li>
+                <li><button id="answer-3" class="answer-btn btn">Answer 3</button></li>
+                <li><button id="answer-4" class="answer-btn btn">Answer 4</button></li>
+            </ul>
+        </div>
+    </div>
+    <div id ="end-page" class= "hide">
+        <h1>Congratulations!</h1>
+        <h2 id="score"></h2>
+        <form>Enter initials<input id="input" type ="text"></form>
+        <button id="submit" class="btn">Submit</button>
+    </div>
+    <div id ="highscore-page" class="hide">
+        <h2>Highscores!</h2>
+        <ul id="highscoreList">
+            
+        </ul>
+    </div>
+
+
 </body>
+
 </html>
